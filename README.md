@@ -6,7 +6,7 @@ Repository for the Mathematica notebook, R code and previoulsy publisheed data u
 Erin Clancey $^{1,\ast}$, Scott L. Nuismer $^2$, and Stephanie N. Seifert $^1$, Using serosurveys to optimize surveillance for zoonotic pathogens
 
 1. Current Address: Paul G. Allen School for Global Health, Washington State University, Pullman, WA 99164 USA;
-2. 2Department of Biological Sciences, University of Idaho, Moscow, ID 83844 USA:
+2. Department of Biological Sciences, University of Idaho, Moscow, ID 83844 USA:
 
 $\ast$ Corresponding author; e-mail: erin.clancey@wsu.edu
 
