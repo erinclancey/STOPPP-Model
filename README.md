@@ -16,17 +16,9 @@ All data used in this study was previously published and is available from Pleyd
 
 Funding was provided by the Centre for Research in Emerging Infectious Diseases—East and Central Africa (CREID-ECA) grant number U01AI151799 (SNS), Verena (viralemergence.org) from the U.S. National Science Foundation (NSF), including NSF BII 2021909 and NSF BII 2213854 and the US National Institute of Allergy and Infectious Disease/National Institutes of Health (NIAID/NIH), grant number U01AI151799 (SNS), NIH 2R01GM122079-05A1 (SLN) and NSF DEB 2314616 (SLN).
 
-## ACCESS INFORMATION
-Licenses placed on the data:
-
-CC0 1.0 Universal (CC0 1.0)
-Public Domain Dedication>
-
-Please use the American Naturalist citation above to cite the data.
-
 ## DATA & CODE FILE OVERVIEW
 The repository is split into four subdirectoires: 
-1. **E_Helvum_Cam** - This directory contains the Mathematica Notebooks corresponding to the *Analytical Approximations*.
-2. **H_Monstrosus_Cam** - This directory contains empirical data and R code to reproduce the analyses in the *Empirical System*, *Individual-Based Simulations and Bayesian Parameter Estimation*, and *Appendix B*.
-3. **Mathematica** - This directory contains the Mathematica Notebooks corresponding to the *Analytical Approximations*.
-4. **Simulations** - This directory contains empirical data and R code to reproduce the analyses in the *Empirical System*, *Individual-Based Simulations and Bayesian Parameter Estimation*, and *Appendix B*.
+1. **E_Helvum_Cam** - This directory contains the data and R code for the *E. helvum* population.
+2. **H_Monstrosus_Cam** - This directory contains the data and R code for the *H. monstrosus* population.
+3. **Mathematica** - This directory contains the Mathematica Notebook.
+4. **Simulations** - This directory contains R code used to create and analyze the simulated data. 
