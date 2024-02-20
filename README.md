@@ -14,7 +14,7 @@ Zoonotic pathogens pose a significant risk to human health, with spillover into 
 
 All data used in this study was previously published and is available from Pleydell, D. R. J. (2023). R, C and NIMBLE code for Yaounde-Ebola-E.helvum modelling paper (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.8193102
 
-Funding was provided by the Centre for Research in Emerging Infectious Diseases—East and Central Africa (CREID-ECA) grant number U01AI151799 (EC,SNS), Verena (viralemergence.org) from the U.S. National Science Foundation (NSF), including NSF BII 2021909 and NSF BII 2213854 and the US National Institute of Allergy and Infectious Disease/National Institutes of Health (NIAID/NIH) grant number U01AI151799 (SNS), and NIH 2R01GM122079-05A1 and NSF DEB 2314616 both awarded to SNL.
+Funding was provided by the Centre for Research in Emerging Infectious Diseases—East and Central Africa (CREID-ECA) grant number U01AI151799 in support of EC and SNS, Verena (viralemergence.org) from the U.S. National Science Foundation (NSF), including NSF BII 2021909 and NSF BII 2213854 and the US National Institute of Allergy and Infectious Disease/National Institutes of Health (NIAID/NIH) grant number U01AI151799 in support of SNS, NIH 2R01GM122079-05A1 awarded to SNL and NSF DEB 2314616 awarded to SNL.
 
 ## DATA & CODE FILE OVERVIEW
 The repository is split into four subdirectoires: 
