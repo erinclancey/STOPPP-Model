@@ -1,4 +1,4 @@
-# STOPPP-Model
+# Serosurveys to Optimize Peak Pathogen Predictions (STOPPP) Model
 
 ## GENERAL INFORMATION
 Repository for the Mathematica notebook, R code and previoulsy publisheed data used in analysesfor the manuscript:
@@ -14,7 +14,7 @@ Zoonotic pathogens pose a significant risk to human health, with spillover into 
 
 All data used in this study was previously published and is available from Pleydell, D. R. J. (2023). R, C and NIMBLE code for Yaounde-Ebola-E.helvum modelling paper (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.8193102
 
-Funding was provided by the Centre for Research in Emerging Infectious Diseases—East and Central Africa (CREID-ECA) grant number U01AI151799 in support of EC and SNS, Verena (viralemergence.org) from the U.S. National Science Foundation (NSF), including NSF BII 2021909 and NSF BII 2213854 and the US National Institute of Allergy and Infectious Disease/National Institutes of Health (NIAID/NIH) grant number U01AI151799 in support of SNS, NIH 2R01GM122079-05A1 awarded to SNL and NSF DEB 2314616 awarded to SNL.
+Funding was provided by the Centre for Research in Emerging Infectious Diseases—East and Central Africa (CREID-ECA) grant number U01AI151799 in support of EC and SNS, PIPP Phase I: Predicting Emergence in Multidisciplinary Pandemic Tipping-points (PREEMPT) from the U.S. National Science Foundation (NSF) grant number 2200140 in support of EC, Verena (viralemergence.org) from NSF including NSF BII 2021909 and NSF BII 2213854 and the US National Institute of Allergy and Infectious Disease/National Institutes of Health (NIAID/NIH) grant number U01AI151799 in support of SNS, NIH 2R01GM122079-05A1 awarded to SNL and NSF DEB 2314616 awarded to SNL.
 
 ## DATA & CODE FILE OVERVIEW
 The repository is split into four subdirectoires: 
