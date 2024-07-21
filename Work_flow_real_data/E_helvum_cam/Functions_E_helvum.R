@@ -1,5 +1,3 @@
-library (rstan)
-
 ## R Mathematical Functions to fit E. helvum data
 
 b_func <- function(t,g,s,psi,f) g*exp(-s*cos(pi*f*t-psi)^2)
