@@ -1,4 +1,4 @@
-setwd("~/STOPPP-Model/Work_flow_real_data/E_helvum_cam/Fit_DATA_STAN_EBOV_E_helvum.R")
+setwd("~/STOPPP-Model/Work_flow_real_data/E_helvum_cam")
 source("Data_Packages_Cam_EH.R")
 source("Functions_E_helvum.R")
 
