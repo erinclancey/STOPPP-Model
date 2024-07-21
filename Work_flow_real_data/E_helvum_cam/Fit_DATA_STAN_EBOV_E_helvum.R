@@ -19,6 +19,3 @@ C2_post = theta_draws$C2
 phi_post = theta_draws$phi
 iter=seq(1,length(a_post), 1)
 ra_posterior = data.frame(iter, a_post, C1_post, C2_post, phi_post)
-
-
-
