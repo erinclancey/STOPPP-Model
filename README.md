@@ -18,6 +18,6 @@ Funding was provided by the Centre for Research in Emerging Infectious Diseases 
 
 ## DATA & CODE FILE OVERVIEW
 The repository is split into four subdirectoires: 
-1. **Work_flow_real_data** - This directory contains information to follow a workflow as a demonstration of how to implement our methodology. This directory contains a README.md file explaing the workflow and two folders containing data and R code for the *E. helvum* and *H. monstrosus* populations.
-2. **Mathematica** - This directory contains the Mathematica Notebook.
-3. **Simulations** - This directory contains R code used to create and analyze the simulated data. 
+1. **Mathematica** - This directory contains the Mathematica Notebook.
+2. **Simulations** - This directory contains R code used to create and analyze the simulated data. 
+3. **Work_flow_real_data** - This directory contains information to follow a workflow as a demonstration of how to implement our methodology. This directory contains a README.md file explaing the workflow and two folders containing data and R code for the *E. helvum* and *H. monstrosus* populations.
