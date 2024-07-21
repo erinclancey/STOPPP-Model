@@ -1,4 +1,4 @@
-setwd("~/STOPPP Model/STOPPP_Model/H_monstrosus_Cam")
+setwd("~/STOPPP-Model/Work_flow_real_data/H_monstrosus_cam")
 source("Functions_H.monstrosus_Cam.R")
 source("Data_Packages_Cam_HM.R")
 
