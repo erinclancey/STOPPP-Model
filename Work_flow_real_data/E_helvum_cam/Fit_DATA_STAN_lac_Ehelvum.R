@@ -33,5 +33,3 @@ ggplot(agg_lac, aes(x=week, y=lac_Prop))+geom_point(color="black",fill="black", 
   stat_function(fun=function(t=Week, g=mode.preg[1],
                              s=mode.preg[2],
                              psi=mode.preg[3]) g*exp(-s*cos(1*pi/52*t-(psi-pi/52))^2), color="black")
-
-
