@@ -1,24 +1,24 @@
-# R script to plot the fitted E. helvum data
+## R script to plot the fitted E. helvum data
 ##################################################
-# name vectors and parameters
+## name vectors and parameters
 fit.posterior <- ra_posterior 
 omega_a=1/12.85714
 gamma=1/1.428571
 f=1/52
 Week <- seq(0,51,1)
 
-# calculate modes from all posterior values
+## calculate modes from all posterior values
 fit.posterior.long <- melt(fit.posterior , id=c("iter"))
 modes <- fit.posterior.long %>% group_by(variable) %>% summarise(mode = posterior.mode(mcmc(value), adjust=1))
 mode <- as.vector(modes$mode)
 
-# Re-sample the posterior for plotting
+## Re-sample the posterior for plotting
 post_sample <- fit.posterior[sample(nrow(fit.posterior), 500, replace = TRUE), ] 
 post_sample.long <- melt(post_sample, id=c("iter"))
 modes <- post_sample.long %>% group_by(variable) %>% summarise(mode = posterior.mode(mcmc(value), adjust=1))
 mode <- as.vector(modes$mode)
 
-# create credible intervals for plotting
+## create credible intervals for plotting
 cred_int=0.95
 a_ci <- ci(post_sample$a_post, ci=cred_int, method = "HDI")
 C1_ci <- ci(post_sample$C1_post, ci=cred_int, method = "HDI")
@@ -29,7 +29,7 @@ cred_post_sample <- subset(post_sample, a_ci$CI_low<a_post & a_post<a_ci$CI_high
                              C2_ci$CI_low<C2_post & C2_post<C2_ci$CI_high &
                              phi_ci$CI_low<phi_post & phi_post<phi_ci$CI_high)
 
-# create fitted values for plotting
+## create fitted values for plotting
 pred_list <- list()
 for(j in 1:length(cred_post_sample$iter)){
   I_pred_fit <- (ra_func_deriv(t=Week, C1=cred_post_sample$C1_post[j], a=cred_post_sample$a_post[j], 
@@ -46,7 +46,8 @@ for(j in 1:length(cred_post_sample$iter)){
 pred_frame <- do.call(rbind, pred_list)
 
 ############################################################
-# fit E. helvum data using the interpolation method
+
+## fit E. helvum data using the interpolation method
 kspline <- ksmooth(EBOVagg_cases$Week, EBOVagg_cases$EBOVPos/EBOVagg_cases$Total_Sampled, "normal", 
                    bandwidth=20, n.points=100)
 R_t_k <- diff(kspline$y)
@@ -57,7 +58,7 @@ spline_df <- data.frame(t_spline, kspline_I,R_spline)
 # calculate peak week
 floor(subset(spline_df, kspline_I==max(spline_df$kspline_I))$t_spline[1])
 
-# fit E. helvum data using the model fitting method and calculate average amplitude
+## fit E. helvum data using the model fitting method and calculate average amplitude
 max <- vector()
 min <- vector()
 peak_list <- list()
@@ -77,11 +78,12 @@ peak_ci
 amp <- max-min
 ci_amp <- ci(amp, method="HDI")
 amp_bar <- mean(amp)
-#calculate avearge amplitude of the cycle
+# calculate avearge amplitude of the cycle
 amp_bar
 
 #########################################
-# plot fitted curves for seroprevalenc and prevalence using both fitting methods
+
+## plot fitted curves for seroprevalenc and prevalence using both fitting methods
 
 # plot seroprevalence
 p_Ra <- pred_frame %>%
@@ -107,7 +109,7 @@ p_Ra_spline <- ggplot()+
   geom_point(data = EBOVagg_cases, aes(Week,EBOVPos_prop), 
                fill = "black", color = "black", 
                size = 1, shape = 21)
-#plot prevalence
+## plot prevalence
 p_I <- pred_frame %>%
   ggplot(aes(x=Week,y=I_pred_fit,group=ID, color=ID))+
   geom_line(aes(group=ID))+
@@ -118,6 +120,7 @@ p_I <- pred_frame %>%
   scale_x_continuous(breaks=seq(0,51,3), limits = c(0,51))+scale_y_continuous(breaks=seq(-0.06,0.22,0.04), limits=c(-0.06,0.22))+
   ggtitle(expression(paste("(b) ",italic("E. helvum "), "PCR Positive Model Fitting")))+theme(plot.title = element_text(size=15))
 x.grob <- textGrob("Time (Weeks)", gp=gpar(fontsize=13))
+
 p_I_spline <- ggplot()+
   theme_minimal()+theme_minimal()+ylab("Proportion Infected")+xlab("")+
   theme(axis.text = element_text(size = 10), axis.title = element_text(size = 13))+
@@ -128,8 +131,8 @@ p_I_spline <- ggplot()+
 x.grob <- textGrob("Time (Weeks)", gp=gpar(fontsize=13))
 plot <- plot_grid(p_Ra,p_Ra_spline, p_I, p_I_spline,ncol = 2, nrow = 2, rel_heights=c(1,1))
 plot2 <- grid.arrange(arrangeGrob(plot, bottom = x.grob))
-#8x6
-# plot the distribution of predicted peaks
+
+## plot the distribution of predicted peaks
 p <- ggplot(peak_vec, aes(x=peak)) + theme_minimal()
 p <- p + geom_density(adjust=3, color="black", fill="white", alpha=0.5)
 p <- p +  geom_histogram(aes(y=after_stat(density)), alpha=0.05, position="identity", binwidth=1, color="black") 
@@ -147,6 +150,3 @@ p <- p + theme(axis.text = element_text(size = 10), axis.title = element_text(si
                legend.position = "none")
 p <- p + ggtitle(expression(paste(italic("E. helvum"))))+theme(plot.title = element_text(size=15))
 plot(p)
-
-
-
