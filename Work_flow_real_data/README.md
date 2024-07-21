@@ -12,12 +12,12 @@ The repository is split into two subdirectoires:
    d. Fit_data_STAN_lac_Ehelvum.R <br>
    e. Fit_data_STAN_EBOV_E_helvum.R <br>
    f. Plot_E_helvum_Fit.R
-3. **H_monstrosus_cam** - This directory contains information to follow a workflow for *H. monstrosus* with the following files:
-   a. H_monstrosus_data.csv
-   b. Data_Packages_H.monstrosus.R
-   c. Functions_H.monstrosus.R
-   d. Fit_data_STAN_Lac_H.monstrosus.R
-   e. FIT_data_STAN_EBOV_H.monstrosus.R
+3. **H_monstrosus_cam** - This directory contains information to follow a workflow for *H. monstrosus* with the following files: <br>
+   a. H_monstrosus_data.csv <br>
+   b. Data_Packages_H.monstrosus.R <br>
+   c. Functions_H.monstrosus.R <br>
+   d. Fit_data_STAN_Lac_H.monstrosus.R <br>
+   e. Fit_data_STAN_EBOV_H.monstrosus.R <br>
    f. Plot_H_monstrosus_Fit.R
 
 
