@@ -5,10 +5,10 @@ Workflow to demonstrate an implementation of the STOPPP model with previously pu
 
 ## DATA & CODE FILE OVERVIEW
 The repository is split into two subdirectoires: 
-1. **E_helvum_cam** - This directory contains information to follow a workflow for *E. helvum* with the following files:
-   a. E_helvum_data.csv
-   b. Data_Packages_E_helvum.R
-   c. Functions_E_helvum.R
+1. **E_helvum_cam** - This directory contains information to follow a workflow for *E. helvum* with the following files:\\
+   a. E_helvum_data.csv \\
+   b. Data_Packages_E_helvum.R \\
+   c. Functions_E_helvum.R \\
    d. Fit_data_STAN_lac_Ehelvum.R
    e. Fit_data_STAN_EBOV_E_helvum.R
    f. Plot_E_helvum_Fit.R
