@@ -1,7 +1,7 @@
 # Workflow for the STOPPP model with real d ata
 
 ## GENERAL INFORMATION
-Workflow to demonstrate an implementation of the STOPPP model with previously published sersurveillance data. Each folder contains the same files specific to each species. Data and R code in each file will re-create the analyses and figures presented in 
+Workflow to demonstrate an implementation of the STOPPP model with previously published sersurveillance data. Each folder contains the same files specific to each species. Data and R code in each file will re-create the analyses and figures presented in Clancey et al. "Using serosurveys to optimize surveillance for zoonotic pathogens." 
 
 ## DATA & CODE FILE OVERVIEW
 The repository is split into four subdirectoires: 
