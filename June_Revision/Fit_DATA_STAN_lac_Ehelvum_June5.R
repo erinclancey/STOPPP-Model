@@ -111,3 +111,5 @@ B <- ggplot() +
 plot <- plot_grid(A,B, ncol = 1, nrow = 2, rel_heights=c(1,1))
 plot
 
+# E. helvum is a relatively long-lived species, with a mean life expectancy estimates across the colonies ranging from 2.3 to 6.8 years, as can be seen after converting the model results to annual survival probabilities
+                #Can survival analyses detect hunting pressure in a highly connected species? Lessons from straw-coloured fruit bats
