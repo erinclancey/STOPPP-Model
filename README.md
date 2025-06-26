@@ -17,7 +17,7 @@ All data used in this study was previously published and is available from Pleyd
 Funding was provided by the Centre for Research in Emerging Infectious Diseases - East and Central Africa (CREID-ECA) grant number U01AI151799 in support of EC and SNS, PIPP Phase I: Predicting Emergence in Multidisciplinary Pandemic Tipping-points (PREEMPT) from the U.S. National Science Foundation (NSF) grant number 2200140 in support of EC, Verena (viralemergence.org) from NSF including NSF BII 2021909 and NSF BII 2213854 and the US National Institute of Allergy and Infectious Disease/National Institutes of Health (NIAID/NIH) grant number U01AI151799 in support of SNS, NIH 2R01GM122079-05A1 awarded to SNL and NSF DEB 2314616 awarded to SNL. Funding was also provided by the cooperative agreement CDC-RFA-FT-23-0069 from the CDC’s Center for Forecasting and Outbreak Analytics in support of EC and SNS. Its contents are solely the responsibility of the authors and do not necessarily represent the official views of the Centers for Disease Control and Prevention.
 
 ## DATA & CODE FILE OVERVIEW
-The repository is split into four subdirectoires: 
+The repository is split into three subdirectoires: 
 1. **Mathematica** - This directory contains the Mathematica Notebook.
 2. **Simulations** - This directory contains R code used to create and analyze the simulated data. 
 3. **Real Data** - This directory contains E. helvum data and R code used to analyze the data. 
