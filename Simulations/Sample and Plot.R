@@ -124,7 +124,7 @@ p2 <- ggplot() +
   #geom_vline(xintercept = peaks_df$t_weeks[5], linetype = 3, color = "#CC79A7", size = 1)
 ########################################
 
-# Display side-by-side
+# Display vertically
 library(patchwork)
 p1 / p2
 
