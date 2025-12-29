@@ -1,4 +1,4 @@
-set=60
+set=80
 
 mk_legend <- ggplot(data = data.tau.list[[set]], aes(x = t))+ theme_minimal()+ ylab("Proportion")+xlab("")+
   geom_line(aes(y = S/N, color="S"), alpha=1, linewidth=0.75) +

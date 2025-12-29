@@ -21,7 +21,7 @@ library(functional)
 library(matrixcalc)
 library(lhs)
 library(xtable) 
-set.seed(220)
+set.seed(420)
 
 ## R Mathematical Functions
 b_func <- function(t,g,s,psi,f) g*exp(-s*cos(pi*f*t-psi)^2)

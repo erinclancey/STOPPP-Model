@@ -7,14 +7,17 @@ f=1/365
 b_func_2 <- function(t) exp(-4*cos(pi*f*t-2.5)^2)
 int=integrate(b_func_2, 1, 365)$value
 
-pars1 <- expand.grid(rep=1:100,combo=2, N0=10000, beta=0.06e-03,omega_a=1/90, omega_i=1/730, gamma=1/10, mu=1/1095,
+pars1 <- expand.grid(rep=1:100,combo=1, N0=10000, beta=0.06e-03,omega_a=1/90, omega_i=1/730, gamma=1/10, mu=1/1095,
                      m=2/365, tau=1, g=1/730*365/int, s=4, psi=2.5, k=(1/730-1/1095)/10000)
 
 pars2 <- expand.grid(rep=1:100,combo=2, N0=10000, beta=0.06e-03,omega_a=1/90, omega_i=1/365, gamma=1/10, mu=1/730,
                      m=2/365, tau=1, g=1/365*365/int, s=4, psi=2.5,k=(1/365-1/730)/10000)
 
-pars3 <- expand.grid(rep=1:100,combo=3, N0=10000, beta=0.06e-03,omega_a=1/365, omega_i=1/365, gamma=1/10, mu=1/730,
-                     m=2/365, tau=1, g=1/365*365/int, s=4, psi=2.5,k=(1/365-1/730)/10000)
+b_func_3 <- function(t) exp(-8*cos(pi*f*t-2.5)^2)
+int_3=integrate(b_func_3, 1, 365)$value
+
+pars3 <- expand.grid(rep=1:100,combo=3, N0=10000, beta=0.06e-03,omega_a=1/90, omega_i=1/365, gamma=1/10, mu=1/730,
+                     m=2/365, tau=1, g=1/365*365/int_3, s=8, psi=2.5,k=(1/365-1/730)/10000)
 
 pars <- rbind(pars1, pars2, pars3)
 

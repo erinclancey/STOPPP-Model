@@ -18,7 +18,7 @@ for(i in 1:length(sample.list)){
   
   R_t_k <- diff(kspline$y)
   rA_df <- data.frame(kspline$x, kspline$y)
-  rA_df <- subset(rA_df, kspline.x>50)
+  rA_df <- subset(rA_df, kspline.x>20)
   peak_gamma[i] <- floor(subset(rA_df, kspline.y==max(rA_df$kspline.y))$kspline.x[1]-
                            (1/pars[sample.list[[i]]$pars_id[1],]$gamma))
   t_spline <- kspline$x[-1]
@@ -92,36 +92,36 @@ ggplot(D.long, aes(x=variable, y=value, fill=variable))+ylab("Proportion Success
 
  
 
-####Sim Stats Table
-columns= c("Sampling Design","Pred Dist. to True", "gamma Dist to True", "T in CI") 
-simple_stats = data.frame(matrix(nrow = 4, ncol = length(columns))) 
-colnames(simple_stats) = columns
-#Daily
-daily <- subset(peaks_df, type=="daily")
-simple_stats$`Sampling Design`[c(1:4)]=c("Daily", "Weekly","Monthly","Bimonthly")
-simple_stats[1,2]= with(daily, round(mean(abs(peak_T-peak_P)),2))
-simple_stats[1,3]= with(daily, round(mean(abs(peak_T-peak_gamma)),2))
-simple_stats[1,4]= round(length(daily$peak_T_inCI[daily$peak_T_inCI==TRUE]) / nrow(daily),2)
-
-#weekly
-weekly <- subset(peaks_df, type=="weekly")
-simple_stats[2,2]= with(weekly, round(mean(abs(peak_T-peak_P)),2))
-simple_stats[2,3]= with(weekly, round(mean(abs(peak_T-peak_gamma)),2))
-simple_stats[2,4]= round(length(weekly$peak_T_inCI[weekly$peak_T_inCI==TRUE]) / nrow(weekly),2)
-
-#monthly
-monthly <- subset(peaks_df, type=="monthly")
-simple_stats[3,2]= with(monthly, round(mean(abs(peak_T-peak_P)),2))
-simple_stats[3,3]= with(monthly, round(mean(abs(peak_T-peak_gamma)),2))
-simple_stats[3,4]= round(length(monthly$peak_T_inCI[monthly$peak_T_inCI==TRUE]) / nrow(monthly), 2)
-#bimonthly
-bimonthly <- subset(peaks_df, type=="bimonthly")
-simple_stats[4,2]= with(bimonthly, round(mean(abs(peak_T-peak_P)),2))
-simple_stats[4,3]= with(bimonthly, round(mean(abs(peak_T-peak_gamma)),2))
-simple_stats[4,4]= round(length(bimonthly$peak_T_inCI[bimonthly$peak_T_inCI==TRUE]) / nrow(bimonthly),2)
-simple_stats
-
-print(xtable(simple_stats, type='latex'))
+# ####Sim Stats Table
+# columns= c("Sampling Design","Pred Dist. to True", "gamma Dist to True", "T in CI") 
+# simple_stats = data.frame(matrix(nrow = 4, ncol = length(columns))) 
+# colnames(simple_stats) = columns
+# #Daily
+# daily <- subset(peaks_df, type=="daily")
+# simple_stats$`Sampling Design`[c(1:4)]=c("Daily", "Weekly","Monthly","Bimonthly")
+# simple_stats[1,2]= with(daily, round(mean(abs(peak_T-peak_P)),2))
+# simple_stats[1,3]= with(daily, round(mean(abs(peak_T-peak_gamma)),2))
+# simple_stats[1,4]= round(length(daily$peak_T_inCI[daily$peak_T_inCI==TRUE]) / nrow(daily),2)
+# 
+# #weekly
+# weekly <- subset(peaks_df, type=="weekly")
+# simple_stats[2,2]= with(weekly, round(mean(abs(peak_T-peak_P)),2))
+# simple_stats[2,3]= with(weekly, round(mean(abs(peak_T-peak_gamma)),2))
+# simple_stats[2,4]= round(length(weekly$peak_T_inCI[weekly$peak_T_inCI==TRUE]) / nrow(weekly),2)
+# 
+# #monthly
+# monthly <- subset(peaks_df, type=="monthly")
+# simple_stats[3,2]= with(monthly, round(mean(abs(peak_T-peak_P)),2))
+# simple_stats[3,3]= with(monthly, round(mean(abs(peak_T-peak_gamma)),2))
+# simple_stats[3,4]= round(length(monthly$peak_T_inCI[monthly$peak_T_inCI==TRUE]) / nrow(monthly), 2)
+# #bimonthly
+# bimonthly <- subset(peaks_df, type=="bimonthly")
+# simple_stats[4,2]= with(bimonthly, round(mean(abs(peak_T-peak_P)),2))
+# simple_stats[4,3]= with(bimonthly, round(mean(abs(peak_T-peak_gamma)),2))
+# simple_stats[4,4]= round(length(bimonthly$peak_T_inCI[bimonthly$peak_T_inCI==TRUE]) / nrow(bimonthly),2)
+# simple_stats
+# 
+# print(xtable(simple_stats, type='latex'))
 
 
 
